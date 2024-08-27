@@ -5,18 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Curso em Vídeo</title>
 </head>
-<body>
+<body onload="checkCookies()">
     <main>
-        <header>Cursos grátis</header>
-        <article>
-            <h2>Curso de HTML 5 e CSS 3</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem pariatur obcaecati sequi cumque ratione dolorum, ducimus eum et, quasi exercitationem atque tenetur! Quo dolorum exercitationem sit recusandae, vel esse optio.</p>
-        </article>
-        <article>
-            <h2>Curso de Javascript</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo voluptatum hic reiciendis deserunt rem sed, nisi quasi ipsum est itaque ut recusandae numquam impedit minima delectus dolorum odit illo nam
-                .</p>
-        </article>
+        <h1>Teste</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fuga inventore quam voluptatibus magnam perspiciatis maiores, aperiam, commodi neque, esse ducimus sunt nostrum optio consectetur tenetur reprehenderit. Earum, delectus perferendis?
+        </p>
+        <button onmouseover="clicar()" onmouseout="desclicar()" id="btnEnviar">Enviar</button>
+
+        <form action="" method="get">
+            <input type="text" name="" id="idTexto" onfocus="focar()" onkeypress="digitar()">
+        </form>
+
+
     </main>
+    <script>
+        addEventListener('keypress', function(){
+            console.log('pressionooooou')
+        })
+
+        function clicar(){
+            var botaoClicar = document.getElementById('btnEnviar')
+            botaoClicar.style.backgroundColor = '#000000'
+        }
+        function desclicar(){
+            var botaoClicar = document.getElementById('btnEnviar')
+            botaoClicar.style.backgroundColor = '#ffffff'
+        }
+        function focar(){
+            var input = document.getElementById('idTexto')
+            input.style.backgroundColor = '#002123'
+        }
+        function digitar(){
+            var input = document.getElementById('idTexto')
+            input.style.backgroundColor = '#252525'
+        }
+        // function redimensionar(){
+        //     window.alert('mudou aí')
+        // }
+        document.addEventListener('keydown', function(event) {
+            // Verifica se a tecla pressionada é a tecla "Cima"
+            if (event.key === 'ArrowUp' || event.keyCode === 38) {
+                alert('Você pressionou a tecla Cima!');
+            }
+        });
+        function checkCookies(){
+            // if(navigator.cookieEnabled == true){
+            //     window.alert('TEM COOOKIE')
+            // }else{
+            //     window.alert('NÂO TEM COOKIE')
+            // }
+            console.log(navigator.userAgent)
+            console.log(navigator.geolocation)
+            console.log(navigator.language)
+            console.log(navigator.onLine)
+            console.log(navigator.pdfViewerEnabled)
+            console.log(navigator.requestMIDIAccess(localStorage))
+            console.log(navigator.hardwareConcurrency)
+        }
+    </script>
 </body>
 </html>
