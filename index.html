@@ -14,19 +14,37 @@
 
         <form action="" method="get">
             <input type="text" name="" id="idTexto" onfocus="focar()" onkeypress="digitar()">
+            <input type="file" name="" id="" ondragend="carregar()">
+            
         </form>
+
+
 
 
     </main>
     <script>
+
+        function carregar(){
+            
+
+        }
         addEventListener('keypress', function(){
             console.log('pressionooooou')
         })
+        // window.addEventListener('beforeunload', function (event) {
+        //     event.preventDefault(); // Isso é necessário para alguns navegadores.
+        //     event.returnValue = 'AAAAAAAAAAAAAAAAAAAAA'; // Mensagem padrão. Navegadores ignoram o valor.
+        // });
 
-        function clicar(){
+        const clicar = () => {
             var botaoClicar = document.getElementById('btnEnviar')
             botaoClicar.style.backgroundColor = '#000000'
         }
+        
+        // function clicar(){
+        //     var botaoClicar = document.getElementById('btnEnviar')
+        //     botaoClicar.style.backgroundColor = '#000000'
+        // }
         function desclicar(){
             var botaoClicar = document.getElementById('btnEnviar')
             botaoClicar.style.backgroundColor = '#ffffff'
